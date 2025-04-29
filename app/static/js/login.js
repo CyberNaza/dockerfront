@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       try {
         const response = await fetch(
-          "http://159.89.108.157:8000/authonticate/login/",
+          "http://127.0.0.1:8000/authonticate/login/",
           {
             method: "POST",
             headers: {
