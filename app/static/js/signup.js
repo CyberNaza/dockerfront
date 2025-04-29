@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/authonticate/register/register/", // Corrected endpoint
+          "http://ownreplib:8000/authonticate/register/register/", // Corrected endpoint
           {
             method: "POST",
             headers: {

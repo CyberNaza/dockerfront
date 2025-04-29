@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Fetch books list
     console.log("Fetching books list");
-    fetch("http://127.0.0.1:8000/library/books/", {
+    fetch("http://ownreplib:8000/library/books/", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${accessToken}`,

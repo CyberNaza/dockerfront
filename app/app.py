@@ -30,7 +30,7 @@ def details():
 
 @app.route("/proxy/books", methods=["GET"])
 def proxy_books():
-    backend_url = "http://127.0.0.1:8000/library/books/"
+    backend_url = "http://ownreplib:8000/library/books/"
     params = request.args.to_dict()
     headers = {
         "Accept": "application/json",
@@ -48,7 +48,7 @@ def proxy_books():
 
 @app.route("/proxy/books/<int:id>/", methods=["GET"])
 def proxy_book_details(id):
-    backend_url = f"http://127.0.0.1:8000/library/books/{id}/"
+    backend_url = f"http://ownreplib:8000/library/books/{id}/"
     headers = {
         "Accept": "application/json",
         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ def proxy_book_details(id):
 
 @app.route("/proxy/books/<int:id>/comments/", methods=["POST"])
 def proxy_book_comments(id):
-    backend_url = f"http://127.0.0.1:8000/library/books/{id}/comments/"
+    backend_url = f"http://ownreplib:8000/library/books/{id}/comments/"
     headers = {
         "Accept": "application/json",
         "Content-Type": "application/json",
@@ -83,7 +83,7 @@ def proxy_book_comments(id):
 
 @app.route("/proxy/comments/create/", methods=["POST"])
 def proxy_comments_create():
-    backend_url = "http://127.0.0.1:8000/library/comments/create/"
+    backend_url = "http://ownreplib:8000library/comments/create/"
     headers = {
         "Accept": "application/json",
         "Content-Type": "application/json",
@@ -101,7 +101,7 @@ def proxy_comments_create():
 
 @app.route("/proxy/likes/create/", methods=["POST"])
 def proxy_likes_create():
-    backend_url = "http://127.0.0.1:8000/library/likes/create/"
+    backend_url = "http://ownreplib:8000library/likes/create/"
     headers = {
         "Accept": "application/json",
         "Content-Type": "application/json",
@@ -119,7 +119,7 @@ def proxy_likes_create():
 
 @app.route("/proxy/books/<int:id>/likes/", methods=["POST"])
 def proxy_book_likes(id):
-    backend_url = "http://127.0.0.1:8000/library/likes/create/"
+    backend_url = "http://ownreplib:8000/library/likes/create/"
     headers = {
         "Accept": "application/json",
         "Content-Type": "application/json",
